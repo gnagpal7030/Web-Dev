@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Container Properties</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: #808080;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .container div {
+            background-color: darkorange;
+            padding: 20px;
+            margin: 10px;
+            font-size: 20px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    
+    display - Must be set to flex or inline-flex
+    flex-direction - Sets the display-direction of flex items
+    flex-wrap - Specifies whether the flex items should wrap or not
+    flex-flow - Shorthand property for flex-direction and flex-wrap
+    -->
+
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        p {
+            color: green;
+            /* This wins because it appears last */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    
+    Here is a concise summary of the core concepts from the MDN CSS Cascade guide, along with practical examples.
+
+
+    1. What is the Cascade?
+
+    The **cascade** is an algorithm that determines how the browser resolves conflicts when multiple CSS rules match the same element. It ensures predictable precedence based on origin, layers, importance, and specificity.
+
+    2. The 5 Steps of the Cascade Algorithm
+
+    When conflicting styles apply to an element, the browser evaluates them in this strict order (from lowest to highest precedence):
+
+    1. **Relevance:** Filters out rules that don't match the element or active media query (e.g., `@media print` rules are ignored on screen displays).
+    2. **Origin and Importance:** Groups styles by *who* wrote them and whether they use `!important`.
+    3. **Specificity:** Compares selector weight (e.g., IDs beat classes, classes beat element tags).
+    4. **Scoping Proximity:** Evaluates how close a scoped rule is to the scope root.
+    5. **Order of Appearance:** If all else is equal, the **last rule declared in the code wins**.
+
+---
+
+    3. Origin & Importance Precedence (Low to High)
+
+    Normal author styles beat browser defaults, but `!important` rules invert normal priorities.
+
+    | Precedence (Low ➔ High) | Origin Type & Importance |
+    | --- | --- |
+    | 1 | User-Agent (Browser default) — Normal |
+    | 2 | User (Custom reader styles) — Normal |
+    | 3 | Author (Developer styles) — Normal |
+    | 4 | CSS Keyframe Animations |
+    | 5 | Author — `!important` |
+    | 6 | User — `!important` |
+    | 7 | User-Agent — `!important` |
+    | 8 | CSS Transitions |
+
+    *Crucial Rule:** The cascade algorithm runs *before* specificity. This means a normal author style will always override a user stylesheet style, even if the user style has higher specificity.
+
+    ---
+
+    4. Code Example: Order of Appearance & Specificity
+
+    When origin, importance, and specificity match, the **last declaration in the stylesheet wins** via the order of appearance rule.
+    -->
+
+    <p>This text will be green.</p>
+
+</body>
+
+</html>

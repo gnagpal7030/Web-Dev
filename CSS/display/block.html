@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Level Element</title>
+    <style>
+        span {
+            border: 2px solid black;
+            margin-bottom: 12px;
+            padding: 4px;
+        }
+
+        span.after {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Before display: block</h2>
+    <span>I am a first span element.</span>
+    <span>I am a second span element.</span>
+
+    <!-- Adding display: block in spans-->
+
+    <h2>After display: block</h2>
+    <span class="after">I am a first span element.</span>
+    <span class="after">I am a second span element.</span>
+</body>
+
+</html>

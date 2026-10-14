@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: #808080;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .container div {
+            background-color: darkorange;
+            padding: 20px;
+            margin: 10px;
+            font-size: 20px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    
+    The justify-content property aligns the flex items along the main-axis (horizontally).
+
+    This property can have one of the following values:
+
+    center
+    flex-start (default)
+    flex-end
+    space-around
+    space-between
+    space-evenly
+
+    -->
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+</body>
+
+</html>

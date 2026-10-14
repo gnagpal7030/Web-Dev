@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tailwind</title>
+</head>
+
+<!-- CSS properties are inherited, so applying on body will eventually be applied to h1 tag -->
+
+<body class="bg-sky-950 text-white">
+
+  <!-- Add 5 px space in vertical direction -->
+  <section class="space-y-5 text-center max-w-3xl mx-auto px-4 py-12">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae accusamus alias est in ea nam soluta
+      laborum non! Doloremque tempore similique a porro dolorem exercitationem possimus error sit excepturi corporis?
+    </p>
+    <h1 class="text-4xl font-bold">We are going to learn tailwind.</h1>
+    <!-- 
+        calc(var(--spacing) * <number>): The CSS output generated under the hood:
+          
+          var(--spacing): The base spacing unit defined in your theme. By default in Tailwind CSS, var(--spacing) is 0.25rem (which equals 4px assuming a standard base font size of 16px).
+          
+          * <number>: Multiplies that base unit by the number provided in the class name. 
+          -->
+    <a href="" class="bg-pink-500 hover:bg-pink-800 px-2 py-3 inline-block rounded-full transition-colors">Click here </a>
+    <script type="module" src="/src/main.js"></script>
+  </section>
+</body>
+
+</html>

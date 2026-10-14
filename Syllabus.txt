@@ -1,0 +1,243 @@
+Web Dev Introduction (1 Day)
+- Introduction
+- How websites work ?
+- What is WWW ?
+- Types of Websites
+- Play with inspect element
+- AI-Assisted Coding Introduction
+- How websites are loaded in Browser ?
+
+Important Links:
+https://www.theodinproject.com/lessons/foundations-introduction-to-web-development
+https://tubikstudio.com/blog/types-of-websites-in-web-design/
+https://medium.com/@able_wong/getting-started-with-ai-assisted-coding-part-1-97816ddb3aaf 
+https://medium.com/@yeshwanth.p9/1-0-tryhackme-how-websites-work-complete-walkthrough-and-notes-c92be1dd09e3 
+
+HTML (3 Days)
+- Introduction
+- Structure of a web page
+- Tags/Elements
+- Types of Tags/Elements
+- Text
+- Lists
+- Links
+- Images
+- Tables
+- Forms
+- HTML 5 Tags 
+- SEO Friendly Markpus - Good Practices
+
+Important Links:
+https://medium.com/@AlexanderObregon/best-practices-for-seo-friendly-html5-code-45130666be6e
+https://web.dev/learn/html  
+
+CSS - https://web.dev/learn/css (12 Days)
+- Introduction
+- Why CSS ?
+- Types of CSS
+- Foudational Properties - background-color, color, margin, padding etc.
+- Cascade, Specifity and Inheritance
+- Units 
+- Box Model
+- Floats
+- FlexBox
+- Responsive design - Media Queries
+- Typography
+- Transitions
+- Animations
+
+Tailwind CSS - 7 Days (After CSS only)
+- Introduction
+- Installation & Setup - As per latest version
+- Text & Colors
+- Wrapper Styles
+- Button
+- Hover States
+- Custom Values
+- Layouts: Top Nav (flexbox)
+- Hero (Grid)
+- Cards (3-column grid)
+- Custom Theme
+- Nth-Child Selectors
+- Pseudo-elements
+- Layers
+- Components 
+
+JavaScript - https://www.javascripttutorial.net/ + https://www.javascripttutorial.net/es6/ (20 Days)
+- Introduction
+- Where Js executes ?
+- Foundation - Data Types, Variables, Decision Statements, Iterative Statements etc.
+- Functions
+- Error Handling
+- Async Programming - Promises - Ajax + API Integration
+- Modules
+- OOPs
+- ES6 Features - Modules, Destructuring, Spread & Rest Operators, Default Parameters, 
+
+JavaScript for UI
+- DOM
+- Events
+- UI Events
+- Form Controls
+- Local & Session storage
+
+React JS (15 Days)
+ - Intro
+ - What Is React? (Slide)
+ - Why React? (Slide)
+ - What Are Components? (Slide)
+ - What Is State? (Slide)
+ - What Are Hooks? (Slide)
+ - What Is JSX? (Slide)
+ - SPA, SSR, SSG (Slide)
+ - Vite (Slide)
+ - Project Demo
+ - Setup React With Vite
+ - File Explanation
+ - Boilerplate Cleanup
+ - Tailwind CSS Setup
+ - JSX Crash Course
+ - Start Homepage 
+ - Navbar Component
+ - Image Import
+ - Hero Component
+ - Props
+ - Default Props
+ - Wrapper Components
+ - JobListings Component
+ - Create Lists With map()
+ - Single JobListing Component
+ - Limit Jobs to 3
+ - useState() Hook & Desc Toggle
+ - Creating an Event
+ - Updating Component State
+ - React Icons Package
+ - React Router Setup
+ - Create Routes From Elements
+ - Router Provider
+ - Homepage Component/Route
+ - Layouts
+ - Jobs Page Component/Route
+ - Link Component
+ - Custom 404 Page
+ - Active Links With NavLink
+ - Conditional Rendering
+ - JSON Server Setup
+ - useEffect() & Data Fetching
+ - Loading Spinner
+ - Conditional Fetching
+ - Proxying
+ - Single Job Page
+ - useParams() to Get ID
+ - Data Loaders
+ - Single Job Output
+ - Add Job Page
+ - Working With Forms
+ - Form Submission
+ - Pass Function as Prop
+ - POST Request to Add Job
+ - Delete Job Button/function
+ - DELETE Request to Remove Job
+ - React Toastify Package
+ - Edit Job Page/Form
+ - Update Form Submission
+ - PUT Request to Update Job
+ - Build Static Assets For Production
+ - Interview Questions
+
+
+Node JS- Intro & Slides (10 Days)
+- Installation
+- Node REPL
+- Setup & package.json Init
+- Running JavaScript Files
+- CommonJS Modules
+- ES Modules
+- HTTP Module & Create Server
+- NPM Scripts
+- NPM Modules & Nodemon
+- .gitignore File
+- Environment Variables & .env
+- Req Object
+- Marking Requests From Postman
+- Simple Routing
+- Loading Files
+- Building a Simple API
+- Middleware
+- Cleanup (Middleware & Handlers)
+- Get Req Body For POST
+- File System Module
+- Path Module
+- OS Module
+- URL Module
+- Crypto Module
+- Emitting Events
+- Process Object
+ 
+Express JS (12 Days)
+- Intro & Slides
+- What is Express?
+- Opinionated vs Unopinionated
+- Prerequisites
+- What we'll cover
+- Express Setup
+- Basic Server
+- --watch Flag & NPM Scripts
+- res.sendFile() Method
+- Static Web Server
+- Working with JSON
+- Postman Utility
+- Environment Variables (.env)
+- Request Params (req.params)
+- Query Strings (req.query)
+- Setting Status Codes
+- Using ES Modules
+- Request Body Data
+- POST Request
+- PUT Request
+- DELETE Request
+- Middleware
+- Custom Error Handler
+- Catch All Error Middleware
+- Colors Package
+- Using Controllers
+- __dirname Workaround
+- Making Requests From Frontend
+- Submit Form to API
+- EJS Template Engine Setup
+- Pass Data to Views
+- Pass and Loop Over Arrays
+- Template Partials
+
+MongoDB - https://neetcode.io/courses/lessons/mongodb (5 Days)
+- Introduction
+- MySQL vs MongoDB
+- Installation & Setup
+- CRUD operations
+- Aggregation Pipeline
+- Indexes
+- Operators
+- ACID properties
+
+Authentication & Application Security
+JWT Integration
+OAuth Integration
+Key Based Authentication
+
+Dev Tools
+- Git & Github - Crash Course - VC, Branching, Merge Requests, PRs, Repos, Collaboration, 
+
+Project - Deploying Full Stack Project on cloud - CWG Website. 
+
+Next.Js
+Future Scope & Optional. 
+
+Devops
+- Microservices Arch 
+- Docker
+- Kubernetes Basics
+- CI/CD Pipelines
+- Logging & Monitoring
+- Deployment Workflows
+- Environment Management
+- Team Collaboration

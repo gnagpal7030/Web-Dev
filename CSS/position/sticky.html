@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Position</title>
+    <style>
+        p {
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        p.main {
+            position: sticky;
+            top: 10px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The sticky value positions the element as a combination of relative and fixed values.
+
+        The sticky position behaves like relative positioning until the element reaches a certain scroll point on the screen. After that, the element sticks to the top of the viewport like a fixed element.
+    -->
+
+    <p class="main">
+        This paragraph has a fixed position value at 10px top.
+    </p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <style>
+        /*
+        CSS units are used to define the length and size of several properties.
+        Two Types of Units are there:
+        1. Absolute Units
+        2. Relative Units
+
+        CSS Absolute Units
+        Absolute units are fixed, and the length expressed in any of these will appear exactly that size.
+
+        Absolute units do NOT change when the screen size change, and are not recommended for websites. However, they can be used if the output medium is known, such as for print layout.
+
+        The most used absolute unit is px (In CSS, a pixel (px) is an absolute length unit that represents one reference pixel.
+
+        Unlike a physical hardware pixel on your monitor (which varies depending on screen resolution and device density), a CSS pixel is defined as an angular measurement—specifically, the visual angle of about one pixel at a distance of 0.0213 degrees, which roughly equals 1/96th of an inch (1in = 96px))
+
+        CSS Relative Units
+        Relative units specify a length relative to another length property (like parent element, root element, or viewport).
+
+        Relative length units scale better between different screen sizes, making them ideal for responsive web design.
+
+        The two most used relative units are em and rem.
+        Important: The em and rem units are perfect for creating scalable and responsive websites!
+
+        */
+        .parent-box {
+            width: 500px;
+            border: 2px solid black;
+            height: 50px;
+            /* The big box */
+        }
+
+        .child-box {
+            border: 2px solid brown;
+            width: 50%;
+            height: 50px;
+            /* Takes up half of 400px = 200px */
+        }
+
+        .parent {
+            border: 2px solid black;
+            width: 500px;
+            font-size: 50px;
+            height: 50px;
+        }
+
+        .child {
+            border: 2px solid brown;
+            /* 5em = 5 * 50 = 250px */
+            width: 5em;
+            height: 50px;
+        }
+
+        html {
+            font-size: 10px;
+            /* The Grandmaster Boss setting */
+        }
+
+        p {
+            font-size: 2rem;
+            /* Always 2 times 10px = 20px, no matter where it is */
+        }
+
+        h1 {
+            font-size: 5vw;
+            /* Text size changes dynamically as you drag and resize the browser window */
+        }
+
+        .full-screen-banner {
+            height: 10vh;
+            /* Covers the exact full height of the screen window */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Absolute Units
+        Absolute units can be used when:
+
+        You need precise, fixed dimensions
+        Designing for print media
+        Creating elements that should not scale with the viewport
+    -->
+    <span style="font-size: 50px;">I represent Absolute Units</span>
+
+    <!-- Relative Units -->
+
+    <!-- 
+        % (Percentage) — The "Share the Pizza" Unit
+        What it means: It takes a portion of whatever size the parent box (the container holding it) has.
+
+        Analogy: Imagine your parents order a pizza. If they say, "You can have 50% of the pizza box's width," your slice will be half as wide as the box. If the box shrinks, your slice shrinks too!
+    -->
+    <div class="parent-box">
+        <div class="child-box"></div>
+    </div>
+
+    <br>
+
+    <!-- em — The "Copycat" Text Unit
+    What it means: It scales text size based on the font size of its immediate parent element.
+
+    Analogy: It’s like a little sibling copying an older sibling. If big brother's text gets bigger, the em text multiplies and gets even bigger! But watch out—if parents inside parents change sizes, em can keep compounding and grow super huge. -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <!-- 
+    rem (Root EM) — The "Boss's Rule" Unit - Also, dependent on font-size of root element
+    What it means: It looks only at the very top boss of the HTML page (<html> root size) and never changes based on nearby boxes.
+
+    Analogy: Instead of copying whoever is standing right next to you, rem always listens to the Grandmaster Boss (the HTML root). No matter how deep inside boxes your text is hiding, it calculates its size straight from the main boss.
+    -->
+
+    <p>I follow rem units</p>
+
+    <!-- vw (Viewport Width) — The "Screen Stretcher" Width
+    What it means: It measures a percentage of the screen width (1vw = 1% of the browser window's width).
+
+    Analogy: Think of the browser screen like a rubber band. If you set something to 100vw, it stretches to fill 100% of the screen from left to right. If you make your browser window narrower, the text or box automatically shrinks with it! -->
+    <h1>I follow vw unit</h1>
+
+    <!-- vh (Viewport Height) — The "Screen Tallness" Height
+    What it means: It measures a percentage of the screen height (1vh = 1% of the browser window's vertical height).
+
+    Analogy: This is the same as vw, but measuring up-and-down instead of side-to-side. If you want a fun game screen or a giant photo to cover your entire phone or PC screen top-to-bottom, you use 100vh. -->
+
+    <div class="full-screen-banner" style="background-color: gray;"></div>
+</body>
+
+</html>

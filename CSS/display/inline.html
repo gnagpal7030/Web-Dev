@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Level Property</title>
+    <style>
+        div {
+            border: 2px solid black;
+            margin-bottom: 12px;
+            padding: 4px;
+        }
+
+        div.after {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The commonly used values for the display property are as follows:
+
+        inline: allows an element to behave like an inline-level element
+        block: allows an element to behave like a block-level element
+        inline-block: formats the element as inline-level but also allows to set height/width like block-level element
+        flex: sets the element as a flex container to have a flexible layout of its child elements
+        grid: sets the element as a grid container to create complex layouts
+        none: removes the element from the document leaving no space 
+    -->
+
+
+    <h2>Before display: inline</h2>
+    <div>I am a first div element.</div>
+    <div>I am a second div element.</div>
+
+    <!-- Adding display: inline in divs -->
+
+    <h2>After display: inline</h2>
+    <div class="after">I am a first div element.</div>
+    <div class="after">I am a second div element.</div>
+
+
+</body>
+
+</html>

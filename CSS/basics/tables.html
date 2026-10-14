@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS on Tables</title>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table,
+        td,
+        th {
+            /* border: 1px solid brown; */
+            border-bottom: 1px solid #ddd;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            height: 50px;
+        }
+
+        tr:nth-child(even) {
+            background-color: gray;
+        }
+
+        tr:hover {
+            background-color: coral;
+        }
+
+        .width-40-per {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="width-40-per">Employee name</th>
+                <th class="width-40-per">Employee Salary</th>
+                <th class="width-40-per">Employe Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Peter Griffin</td>
+                <td>1200$</td>
+                <td>England</td>
+            </tr>
+            <tr>
+                <td>Quagmire</td>
+                <td>1200$</td>
+                <td>England</td>
+            </tr>
+            <tr>
+                <td>Cleaveland</td>
+                <td>1200$</td>
+                <td>England</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>1200$</td>
+                <td>England</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>1200$</td>
+                <td>England</td>
+            </tr>
+            <tr>
+                <td>Meg</td>
+                <td>1200$</td>
+                <td>England</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+
+</body>
+
+</html>

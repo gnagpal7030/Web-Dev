@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        /* Selector A */
+        body div p {
+            color: red;
+            /* Score: 0-0-3 (Three type selectors) */
+        }
+
+        /* Selector B */
+        .content p {
+            color: blue;
+            /* Score: 0-1-1 (One class, one type selector) */
+        }
+
+        /* Selector C */
+        #unique-box {
+            color: green;
+            /* Score: 1-0-0 (One ID selector) */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. What is Specificity?
+    When multiple competing rules match the same element within the same cascade origin and layer, the browser uses specificity to calculate a "weight score" to decide which rule wins.
+
+    Specificity is structured into a 3-column counting system: ID — CLASS — TYPE (written like 0-0-0).
+
+    2. The Three Specificity Categories (High to Low)
+    ID Selectors (1-0-0):
+
+    Counts unique ID attributes (e.g., #nav, #submit-btn). One ID instantly overrules any number of classes.
+
+    Class, Attribute, & Pseudo-class Selectors (0-1-0):
+
+    Counts class names (e.g., .card), attribute selectors (e.g., [type="text"]), and pseudo-classes (e.g., :hover, :focus, :nth-child(2)).
+
+    Type & Pseudo-element Selectors (0-0-1):
+
+    Counts HTML element tags (e.g., div, p, h1) and pseudo-elements (e.g., ::before, ::after).
+
+    Note: Universal selectors (*), combinators (>, +, ~), and structural pseudo-classes like :where() contribute 0-0-0 to the score.
+
+    3. Special Cases & Inline Styles
+    Inline Styles (1-0-0-0): Styles written directly inside an HTML tag (style="...") bypass normal selector math and act as if they have an absolute highest priority score (unless beaten by an author !important rule).
+
+    The :is(), :not(), and :has() Pseudo-classes: These pseudo-classes themselves add zero weight, but they adopt the highest specificity score from whatever selector arguments are passed inside their parentheses.
+
+    4. Code Example: Calculating and Comparing Specificity
+    When comparing weights, browsers evaluate columns strictly from left to right (ID first, then Class, then Type). -->
+    <div id="unique-box" class="content">
+        <p>What color will this text be?</p>
+    </div>
+
+    <!-- Winner: Green (#unique-box wins instantly because its ID column value of 1 beats the class and type columns of selectors A and B, regardless of how many tags or classes they contain). -->
+</body>
+
+</html>

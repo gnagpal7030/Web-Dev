@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply background image</title>
+    <style>
+        /* Force html and body to fill the full screen viewport height */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            /* Specifies the path to the background image file */
+            background-image: url('./images/background-original.jpg');
+
+            /* Prevents the image from repeating or tiling across the screen */
+            background-repeat: no-repeat;
+
+            /* Scales the image to completely cover the screen while maintaining its aspect ratio */
+            background-size: cover;
+
+            /* Centers the image focal point in the middle of the viewport */
+            background-position: center;
+        }
+
+        /* 
+        
+        To ensure your background image fits a PC screen cleanly without awkward cropping, you should match standard monitor dimensions and follow image design rules.
+
+        1. Target the Standard PC Aspect Ratio (16:9)
+
+        Most PC monitors and laptops use a 16:9 aspect ratio. When downloading or searching for images, look for these standard pixel resolutions:
+
+        * Full HD (1080p): `1920 × 1080` pixels *(Most common standard)*
+        * QHD / 2K: `2560 × 1440` pixels *(Sharper quality for high-end displays)*
+        * 4K UHD:`3840 × 2160` pixels *(Maximum detail)*
+
+        2. Design for the "Center Safe Zone"
+
+        Because users resize browser windows or view sites on different screen proportions, browser engines will always clip the outer edges when using `background-size: cover`.
+
+        * Keep critical visual elements (faces, logos, main subjects) in the *center 60% of the frame.
+        * Avoid placing important details at the extreme left, right, top, or bottom edges. 
+        
+        */
+    </style>
+</head>
+
+<body>
+
+    <h1 style="font-style: italic;color: black;">Visit the Place. Enjoy the day.</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margins Demonstration</title>
+    <style>
+        /* * {
+            margin: 0px;
+        } */
+
+        .parent {
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            margin-left: 50px;
+        }
+
+        .child {
+            margin-left: inherit;
+            height: 100px;
+            width: 250px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The CSS margin properties are used to create space around elements, outside of any defined borders.
+
+    Margins define the distance between an element's border and the surrounding elements. 
+    
+    All the margin properties can have the following values:
+
+    auto - the browser calculates the margin
+    length - specifies a margin in px, pt, cm, etc.
+    % - specifies a margin in % of the width of the containing element
+    inherit - specifies that the margin should be inherited from the parent element
+
+    ShortHand:
+
+    margin: 25px 50px 75px 100px;
+    top margin is 25px
+    right margin is 50px
+    bottom margin is 75px
+    left margin is 100px
+
+    margin: 25px 50px 75px;
+    top margin is 25px
+    right and left margins are 50px
+    bottom margin is 75px
+
+    margin: 25px 50px;
+    top and bottom margins are 25px
+    right and left margins are 50px
+
+    margin: 25px
+    All sides margins are 25px
+
+-->
+
+    <p style="margin-top: 100px;"> I took margin-top as 100px</p>
+    <p style="margin-top: 100px;"> I took margin-top as 100px</p>
+
+    <div class="parent">
+
+        <div class="child"></div>
+
+    </div>
+
+    <!-- 
+    
+    Margin collapse is when two margins collapse into a single margin.
+
+    Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+
+    Note: Margin collapse only happens with top and bottom margins! Not left and right margins!
+
+    -->
+    <h1 style="margin-bottom: 50px;">Top Content</h1>
+    <h1 style="margin-top: 60px;">Bottom Content</h1>
+
+    <!-- margin:auto 
+     
+    Centered horizontally, and with two strict conditions:
+
+    1. It must be a block-level element (like a <div> or <p>).
+
+    2. It must have a defined width that is less than its parent container (e.g., width: 500px;). -->
+    <div style="margin:auto; width: 100px;">I am in center</div>
+
+</body>
+
+</html>

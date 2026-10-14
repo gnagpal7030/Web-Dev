@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Position Demonstration</title>
+    <style>
+        p {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        p.main {
+            position: static;
+            top: 50px;
+            /* doesn't work */
+            right: 50px;
+            /* doesn't work */
+            bottom: 50px;
+            /* doesn't work */
+            left: 50%;
+            /* doesn't work */
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The CSS position property is used to define the position of an element on a webpage.
+
+        The location of the positioned element is set with the four properties: top, left, right, and bottom. These properties only work when the position property is set and have different positioning behaviors.
+
+        - static (default value)
+        - relative
+        - absolute
+        - fixed
+        - sticky
+    -->
+
+    <!-- 
+        The static value of the position property allows elements to be positioned accordingly to the normal flow of the document. The static position is not affected by the top, right, bottom, and left values. This is the default value of the element. 
+    -->
+    <p>This is a normal paragraph.</p>
+    <p class="main">This paragraph is positioned using the static value.</p>
+    <p>This is a normal paragraph.</p>
+</body>
+
+</html>

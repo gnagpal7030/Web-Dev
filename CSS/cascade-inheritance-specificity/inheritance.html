@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <style>
+        p {
+            color: green;
+            /* Parent rule */
+        }
+
+        p.inherit-test {
+            border: 2px dotted black;
+            color: blue;
+        }
+
+        em {
+            border: inherit;
+            /* Forces the child to copy the parent's border */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    
+    1. What is CSS Inheritance?
+    Inheritance dictates what happens when a property value is not explicitly specified on an element. Instead of starting from scratch, elements can inherit values from their parent containers.
+
+    Properties split into two default behaviors:
+
+    Inherited Properties: Automatically take the computed value of the parent element (e.g., color, font-family, font-size, line-height).
+
+    Non-Inherited Properties: Default to their built-in initial value rather than copying the parent (e.g., border, background-color, padding, margin).
+
+    2. Controlling Inheritance Explicitly
+    You can override default inheritance behavior using special CSS keywords:
+
+    inherit: Forces a property to inherit its parent's value, even if it is normally non-inherited by default.
+
+    initial: Resets the property to its absolute browser default value.
+
+    unset: Acts as inherit if the property is naturally inherited, or initial if it is naturally non-inherited.
+
+    -->
+
+    <p>This paragraph has <em>emphasized text</em> inside it.</p>
+
+    <p class="inherit-test">This paragraph has <em>emphasized text</em> inside it.</p>
+</body>
+
+</html>

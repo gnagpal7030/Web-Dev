@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self</title>
+    <style>
+        .container {
+            display: grid;
+            height: 300px;
+            grid-template-columns: auto auto auto;
+            background-color: dodgerblue;
+            padding: 5px;
+            gap: 5px;
+        }
+
+        .container div {
+            background-color: #f1f1f1;
+            color: #000;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item1 {
+            align-self: start;
+        }
+
+        .item6 {
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    
+    The align-self property is used to align a grid item within its grid cell in the block direction.
+
+    This property can have one of the following values:
+
+    auto (default)
+    normal
+    stretch
+    start
+    end
+    center
+    Note: For this property to have any alignment effect, the grid item need available space around itself in the block direction. 
+
+    -->
+    <h2>The align-self property</h2>
+
+    <p>The align-self property is used to align a grid item within its grid cell in the block direction.</p>
+
+    <div class="container">
+        <div class="item1">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item3">Item 3</div>
+        <div class="item4">Item 4</div>
+        <div class="item5">Item 5</div>
+        <div class="item6">Item 6</div>
+    </div>
+
+</body>
+
+</html>

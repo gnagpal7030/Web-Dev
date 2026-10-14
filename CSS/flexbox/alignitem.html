@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: #808080;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 500px;
+            align-content: center;
+        }
+
+        .container div {
+            background-color: darkorange;
+            padding: 20px;
+            margin: 10px;
+            font-size: 20px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    The align-items property aligns the flex items vertically (on the cross-axis).
+
+    This property can have one of the following values:
+
+    normal (default)
+    stretch
+    center
+    flex-start
+    flex-end
+    baseline
+
+    The align-content property aligns the flex lines. It only has effect when flex items wrap onto multiple lines.
+
+    This property can have one of the following values:
+
+    stretch (default)
+    center
+    flex-start
+    flex-end
+    space-between
+    space-around
+    space-evenly
+    -->
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+</body>
+
+</html>

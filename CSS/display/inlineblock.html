@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Block Property</title>
+    <style>
+        span {
+            width: 60px;
+            height: 30px;
+            padding: 10px;
+            margin: 20px;
+
+            border: 2px solid black;
+            background-color: greenyellow;
+        }
+
+        span.after {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The inline-block value of the display property combines characteristics of inline and block elements.
+
+    When an element is set to inline-block,
+
+    It flows like an inline element allowing other elements to flow around horizontally.
+    It accepts the width and height properties. (By default, width and height don't work in inline elements.)
+    It accepts the padding and margin values. (By default, top and bottom margins don't work for inline elements, and padding also doesn't push other elements away.)
+ -->
+
+    <h2>Before display: inline-block</h2>
+    <p>
+        In this paragraph, the <span>span</span> element is color in
+        green-yellow color. The width and height don't work, the padding
+        value doesn't push surrounding content away, and the top/bottom
+        margins don't work.
+    </p>
+
+    <!-- Adding display: inline-block the divs -->
+
+    <h2>After display: inline-block</h2>
+    <p>
+        In this paragraph, the <span class="after">span</span> element is
+        color in green-yellow color. The width and height work, the padding
+        value push surrounding content away, and the top/bottom margins
+        work.
+    </p>
+</body>
+
+</html>

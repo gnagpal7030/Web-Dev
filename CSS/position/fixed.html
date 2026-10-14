@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Position Demonstration</title>
+    <style>
+        p {
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        p.main {
+            position: fixed;
+            top: 10px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The fixed value positions an element to remain fixed in the same position, even when the page is scrolled. It is similar to the absolute value, but it remains relative to the viewport at all times. 
+    -->
+    <p class="main">
+        This paragraph has a fixed position value at 10px top.
+    </p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+    <p>This is a normal paragraph.</p>
+</body>
+
+</html>

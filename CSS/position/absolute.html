@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position Demonstration</title>
+    <style>
+        p {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        p.main {
+            position: absolute;
+            top: 70px;
+            left: 60px;
+            background-color: greenyellow;
+        }
+
+        div.parent {
+            position: relative;
+            background-color: orange;
+            border: 4px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The absolute value removes the element completely from its normal flow in the document.
+
+        The element is positioned relative to their closest positioned parent element (an ancestor element with a position value other than static).
+
+        If there is no positioned ancestor, they are positioned relative to the document itself.
+    -->
+
+    <p>This is a normal paragraph.</p>
+    <p class="main">
+        This is an absolutely positioned paragraph at 40px top and 60px left.
+    </p>
+    <p>This is a normal paragraph.</p>
+
+    <!-- In the above example, the second paragraph doesn't have a positioned parent element, so it is positioned relative to the viewport (visible area of the browser). 
+     
+    TODO: When you apply position: absolute (or position: fixed), the browser changes the element's layout behavior, causing it to undergo what CSS specifications call blockification or taking on shrink-to-fit width sizing.
+
+    Here is why it stops taking up 100% of the available width:
+
+    Removal from Normal Flow: An absolute element is pulled completely out of the normal document flow. Because it no longer floats in the normal box layout, it can no longer "stretch" across the parent container's width like a normal block-level element.
+
+    Shrink-to-Fit Behavior: Just like inline elements, floats, or flex items, absolutely positioned boxes shrink horizontally to fit only their inner content unless you explicitly give them a set width (like width: 100% or width: 300px).
+    -->
+
+    <!-- Inside a positioned parent -->
+
+    <div class="parent">
+        <p>This paragraph is inside the div element.</p>
+        <p class="main">
+            This is an absolutely positioned paragraph inside the div
+            element at 40px top and 60px left.
+        </p>
+        <p>This paragraph is inside the div element.</p>
+    </div>
+
+    <!-- Here, even though both paragraphs of the main class are given the same styles, their positions are different. This is because the first paragraph doesn't have a positioned parent element, so it is positioned relative to the document (viewport).
+
+    On the other hand, the second paragraph has a parent div element with a relative position value and is hence positioned relative to the div element.
+
+    Note: An absolutely positioned element loses its size and original space in the document flow. -->
+</body>
+
+</html>

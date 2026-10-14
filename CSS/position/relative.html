@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position Demonstration</title>
+    <style>
+        p {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        p.main {
+            position: relative;
+            /* positions 90px from the top */
+            top: 90px;
+
+            /* positions 40px from the left */
+            left: 40px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    
+    The relative value positions the element relative to the original position in the document. The element is positioned with the top, right, bottom, and left values.
+
+    -->
+    <p>This is a normal paragraph.</p>
+    <p class="main">
+        This paragraph is positioned with a relative value of top 90px and
+        left 40px.
+    </p>
+    <p>This is a normal paragraph.</p>
+
+    <!-- 
+    In the above example, the second paragraph is positioned relative to its normal flow i.e. 90px from the top and 40px from the left of the original position.
+
+    The space is preserved in the original position of the element. 
+-->
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic Selectors</title>
+    <style>
+        /* Universal Selector */
+        * {
+            text-decoration: underline;
+        }
+
+        /* ID Selector 
+        
+        What happens if we use id multiple times ?
+        1. HTML violation: It breaks the core specification requiring every id to be globally unique.
+
+        2. CSS failure: Styling rules targeting the ID only apply to the first matching element in the DOM.
+
+        3. JavaScript breakage: Methods like document.getElementById() only return the first element and ignore duplicates.
+
+        4. Accessibility failure: Screen readers get confused mapping accessibility attributes, breaking screen navigation.
+
+        5. Broken anchor links: Jump links (#id) will always scroll only to the first occurrence on the page.
+
+        */
+        #big-heading {
+            color: red;
+        }
+
+        /* Class Selector */
+        .text-blue {
+            color: blue;
+        }
+
+        /* Name Selector */
+        span {
+            color: brown;
+        }
+
+        /* Group Selector */
+        p,
+        span {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="big-heading">This is the biggest heading on the page</h1>
+
+    <p class="text-blue">This is paragraph 1</p>
+    <p class="text-blue">This is paragraph 2</p>
+    <p>This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p>This is paragraph 5</p>
+    <span>I am different</span>
+</body>
+
+</html>

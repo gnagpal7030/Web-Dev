@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* 
+In Tailwind CSS, Preflight is an opinionated set of base styles designed to smooth over cross-browser inconsistencies. 
+
+This causes the h1 does not styled as bigger font as Tailwind Preflight overrides the default browser style. 
+
+This applies Tailwind’s reset, which makes h1 inherit the surrounding font size and weight instead of using the browser’s default large bold styling. The <h1> exists in index.html, but it has no explicit Tailwind classes or CSS making it large.
+
+Tailwind removes all browser default styles. 
+*/
