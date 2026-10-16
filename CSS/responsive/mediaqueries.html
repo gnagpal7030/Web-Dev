@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Demonstration</title>
+    <style>
+        /* Base styles: Designed for mobile phones by default */
+        .box {
+            background-color: lightcoral;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Media Query: Applies when the screen width is 768px or wider (Tablets & Desktops) */
+        @media (min-width: 768px) {
+            .box {
+                background-color: lightseagreen;
+                padding: 50px;
+                font-size: 28px;
+            }
+        }
+
+        /* 
+        Mobile-First Default: The .box class styles the element with a coral background and 18px text. This is what users on small mobile screens see.
+
+        The Breakpoint (@media (min-width: 768px)): This line acts like an if-statement for CSS. It tells the browser: "If the screen width is 768 pixels or wider, override the styles inside."
+
+        The Result: When students open this file in a browser and drag the window smaller or larger, the box instantly switches its background color and text size the moment it crosses the 768px threshold. */
+
+        /* TODO: Read about max-width */
+
+
+        /* Important:
+        
+        **Both** `min-width` and `max-width` can be used, and which one you use depends on your design strategy.
+
+        Here is how they differ and when to use each:
+
+        ### 1. `min-width` (Mobile-First Approach)
+
+        * **How it works:** Applies styles when the screen size is **at least** a certain width and gets **larger**.
+        * **Example:** `@media (min-width: 768px)` means *"Apply these styles if the screen is 768px wide or wider."*
+        * **Best practice:** Highly recommended for modern web development because you start with simple mobile styles and layer on complexity as screen real estate increases.
+
+        ### 2. `max-width` (Desktop-First Approach)
+
+        * **How it works:** Applies styles when the screen size is **at most** a certain width and gets **smaller**.
+        * **Example:** `@media (max-width: 767px)` means *"Apply these styles if the screen is 767px wide or narrower."*
+        * **Usage:** Often used when you build a desktop layout first and want to override elements (like collapsing a desktop menu into a hamburger icon) when shrinking down to mobile screens.*/
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        Resize the browser window to see me change!
+    </div>
+
+</body>
+
+</html>

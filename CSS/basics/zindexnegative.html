@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Index Negative</title>
+    <style>
+        div {
+            font-size: 24px;
+            padding: 12px;
+        }
+
+        div.greenyellow {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            /* specifying z-index value */
+            z-index: 3;
+
+            width: 300px;
+            height: 150px;
+            background: greenyellow;
+        }
+
+        div.orange {
+            position: absolute;
+            top: 190px;
+            left: 0;
+
+            /* specifying negative z-index value */
+            z-index: -4;
+
+            width: 380px;
+            height: 80px;
+            margin-top: -120px;
+            padding-top: 120px;
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        The element having a negative value of the z-index property stacks the element further behind other elements with positive values.
+    -->
+    <div class="greenyellow">position: absolute; <br />z-index: 3;</div>
+    <div class="orange">position: absolute; <br />z-index: -4;</div>
+</body>
+
+</html>

@@ -5,9 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z Index Demonstration</title>
+    <style>
+        div {
+            font-size: 24px;
+            padding: 12px;
+        }
+
+        div.greenyellow {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            /* specifying z-index value */
+            z-index: 3;
+
+            width: 300px;
+            height: 280px;
+            background-color: greenyellow;
+        }
+
+        div.orange {
+            position: absolute;
+            top: 190px;
+            left: 0;
+
+            /* specifying z-index value */
+            z-index: 10;
+
+            width: 220px;
+            height: 150px;
+            margin-top: -120px;
+            background-color: orange;
+        }
+
+        div.skyblue {
+            position: absolute;
+            top: 120px;
+            left: 160px;
+
+            /* specifying z-index value */
+
+            z-index: 6;
+            width: 280px;
+            height: 150px;
+            padding-left: 120px;
+            background-color: skyblue;
+        }
+    </style>
 </head>
 
 <body>
+
+    <!-- 
+    
+    The CSS z-index property is used to control the stacking order of the positioned elements.
+
+    the div with the higher z-index value stacks on top of the div with the lower z-index value.
+
+    The z-index property only works with positioned elements and items of the flex container.
+
+    The position property value should be different from the default static value.
+
+    -->
+
+    <div class="greenyellow">position: absolute; <br />z-index: 3;</div>
+    <div class="orange">position: absolute; <br />z-index: 10;</div>
+    <div class="skyblue">position: absolute; <br />z-index: 6;</div>
 
 </body>
 
