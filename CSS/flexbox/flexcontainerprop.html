@@ -7,10 +7,12 @@
     <title>Flexbox Container Properties</title>
     <style>
         .container {
+            margin-top: 5px;
             display: flex;
+            /* Change to inline-flex*/
             background-color: #808080;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
 
         .container div {
@@ -30,6 +32,7 @@
     flex-direction - Sets the display-direction of flex items
     flex-wrap - Specifies whether the flex items should wrap or not
     flex-flow - Shorthand property for flex-direction and flex-wrap
+    flex-flow: row nowrap;
     -->
 
     <div class="container">
@@ -37,6 +40,22 @@
         <div>Item 2</div>
         <div>Item 3</div>
         <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+    </div>
+
+    <!-- <br> -->
+    <div class="container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+    <div class="container">
+        <div>Item 1</div>
     </div>
 
 </body>

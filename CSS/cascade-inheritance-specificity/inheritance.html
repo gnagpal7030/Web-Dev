@@ -44,6 +44,26 @@
 
     unset: Acts as inherit if the property is naturally inherited, or initial if it is naturally non-inherited.
 
+    The unset CSS keyword resets a property to its inherited value if the property naturally inherits from its parent, and to its initial value if it does not.
+    
+    Essentially, it acts as a dynamic switch between two other CSS keywords:
+    • Behaves like inherit for inherited properties (e.g., color, font-family).
+    • Behaves like initial for non-inherited properties (e.g., margin, padding, border).
+
+    The true significance of unset comes down to one word: overriding.
+    You use unset when a property has already been changed by another CSS rule higher up in the stylesheet, and you want to undo that change, forcing the property back to its natural default state.
+
+    p {
+        color: red;
+        margin: 20px;
+    }
+
+    /* You want this specific child to act like regular HTML again */
+    .special-sidebar .child {
+        color: unset;  /* Undoes 'red' -> Goes back to inheriting parent's color */
+        margin: unset; /* Undoes '20px' -> Goes back to initial (0) */
+    }
+
     -->
 
     <p>This paragraph has <em>emphasized text</em> inside it.</p>

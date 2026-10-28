@@ -50,12 +50,10 @@
     3. Special Cases & Inline Styles
     Inline Styles (1-0-0-0): Styles written directly inside an HTML tag (style="...") bypass normal selector math and act as if they have an absolute highest priority score (unless beaten by an author !important rule).
 
-    The :is(), :not(), and :has() Pseudo-classes: These pseudo-classes themselves add zero weight, but they adopt the highest specificity score from whatever selector arguments are passed inside their parentheses.
 
-    4. Code Example: Calculating and Comparing Specificity
-    When comparing weights, browsers evaluate columns strictly from left to right (ID first, then Class, then Type). -->
-    <div id="unique-box" class="content">
-        <p>What color will this text be?</p>
+    4. Code Example: Calculating and Comparing Specificity -->
+    <div>
+        <p class="content" id="unique-box">What color will this text be?</p>
     </div>
 
     <!-- Winner: Green (#unique-box wins instantly because its ID column value of 1 beats the class and type columns of selectors A and B, regardless of how many tags or classes they contain). -->

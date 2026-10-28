@@ -1,0 +1,156 @@
+/* Start with the narrow-screen layout: one column and comfortable spacing. */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    color: #233044;
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #dce2e9;
+}
+
+.brand {
+    color: #176b5b;
+    font-size: 1.4rem;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.site-nav a {
+    color: #233044;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: #176b5b;
+    text-decoration: underline;
+}
+
+main {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 20px 16px 40px;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    margin-bottom: 4px;
+}
+
+.intro p {
+    color: #566579;
+}
+
+/* On a phone, filters sit above the products instead of beside them. */
+.catalog-layout {
+    display: grid;
+    gap: 20px;
+}
+
+.filters,
+.product-card {
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #dce2e9;
+    border-radius: 10px;
+}
+
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.product-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.product-image {
+    display: grid;
+    min-height: 140px;
+    place-items: center;
+    margin: -16px -16px 14px;
+    background: #e8f3ef;
+    border-radius: 10px 10px 0 0;
+    font-size: 3.5rem;
+}
+
+.price {
+    display: block;
+    margin-bottom: 12px;
+    color: #176b5b;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 10px 14px;
+    color: #ffffff;
+    background: #176b5b;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.product-card button:hover {
+    background: #104c41;
+}
+
+/* At 600px, two cards fit comfortably in each product-grid row. */
+@media (min-width: 600px) {
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* At 900px, move filters to a sidebar and show three product columns. */
+@media (min-width: 900px) {
+    .catalog-layout {
+        grid-template-columns: 200px auto;
+        align-items: start;
+    }
+
+    .filter-options {
+        flex-direction: column;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

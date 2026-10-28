@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="brand">Good Goods</h1>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#products">Shop</a>
+            <a href="#filters">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" id="about">
+            <h2>Everyday favorites</h2>
+            <p>A small product catalog that adapts to the space available.</p>
+        </section>
+
+        <div class="catalog-layout">
+            <aside class="filters" id="filters" aria-labelledby="filters-heading">
+                <h3 id="filters-heading">Filter by category</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="category" value="home"> Home</label>
+                    <label><input type="checkbox" name="category" value="outdoors"> Outdoors</label>
+                    <label><input type="checkbox" name="category" value="accessories"> Accessories</label>
+                </div>
+            </aside>
+
+            <section id="products" aria-label="Products">
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image" aria-hidden="true">☕</div>
+                        <h3>Stoneware Mug</h3>
+                        <p>A sturdy mug for your morning coffee or tea.</p>
+                        <span class="price">$18</span>
+                        <button type="button">Add to bag</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" aria-hidden="true">🎒</div>
+                        <h3>Day Trip Backpack</h3>
+                        <p>A lightweight everyday bag with room for the essentials.</p>
+                        <span class="price">$54</span>
+                        <button type="button">Add to bag</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" aria-hidden="true">🪴</div>
+                        <h3>Desk Plant</h3>
+                        <p>A little green companion for your workspace.</p>
+                        <span class="price">$22</span>
+                        <button type="button">Add to bag</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" aria-hidden="true">🧴</div>
+                        <h3>Travel Bottle</h3>
+                        <p>A reusable bottle that is easy to take on the go.</p>
+                        <span class="price">$16</span>
+                        <button type="button">Add to bag</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" aria-hidden="true">🕯️</div>
+                        <h3>Calm Candle</h3>
+                        <p>A softly scented candle for a relaxing evening.</p>
+                        <span class="price">$28</span>
+                        <button type="button">Add to bag</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" aria-hidden="true">🧢</div>
+                        <h3>Canvas Cap</h3>
+                        <p>A simple, adjustable cap for sunny days outside.</p>
+                        <span class="price">$24</span>
+                        <button type="button">Add to bag</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

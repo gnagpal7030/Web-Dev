@@ -10,60 +10,39 @@
 <body>
 
     <!-- 
-    CSS typography controls the appearance, layout, and readability of text on a web page. By combining font styling, text spacing, and layout properties, you can establish visual hierarchy and improve user experience. [1, 2, 3] 
+    CSS typography controls the appearance, layout, and readability of text on a web page. By combining font styling, text spacing, and layout properties, you can establish visual hierarchy and improve user experience. 
     Here is a comprehensive breakdown of the core CSS properties used to handle web typography:
     ## 1. Font Styling Properties
     These properties alter the physical appearance of the typeface itself. [4] 
 
-    * font-family: Sets the typeface or a prioritized list of fallback fonts (called a "font stack"). Always include a generic family at the end. [4, 5, 6] 
+    * font-family: Sets the typeface or a prioritized list of fallback fonts (called a "font stack"). Always include a generic family at the end. 
 
     font-family: "Inter", "Helvetica Neue", sans-serif;
 
-    * font-size: Adjusts the scale of the text. Best practice dictates using relative units like rem or em for accessibility and responsive scaling, or clamp() for fluid sizing. [1, 3, 6, 7] 
+    * font-size: Adjusts the scale of the text. Best practice dictates using relative units like rem or em for accessibility and responsive scaling, or clamp() for fluid sizing. 
 
     font-size: 1.25rem; 
-    font-size: clamp(1rem, 2.5vw, 2rem); /* Fluid sizing based on viewport */
 
-    * font-weight: Sets text thickness using keywords (normal, bold) or numeric values ranging from 100 to 900. [6, 7] 
+    * font-weight: Sets text thickness using keywords (normal, bold) or numeric values ranging from 100 to 900.
 
     font-weight: 600; /* Semi-bold */
 
-    * font-style: Changes text presentation to italic or oblique. [4, 6] 
-    * text-transform: Controls letter capitalization (uppercase, lowercase, capitalize). [4, 6] 
+    * font-style: Changes text presentation to italic or oblique.
+
+    * text-transform: Controls letter capitalization (uppercase, lowercase, capitalize). 
 
     ## 2. Spacing & Text Layout Properties
-    These properties adjust how text flows, interacts with its container, and paces itself vertically and horizontally. [2] 
+    These properties adjust how text flows, interacts with its container, and paces itself vertically and horizontally.
 
-    * line-height: Controls the vertical space between lines of text. For body paragraphs, use unitless values between 1.5 and 1.8 to ensure safe proportionate scaling. [1, 5] 
+    * line-height: Controls the vertical space between lines of text. 
 
     line-height: 1.6;
 
-    * letter-spacing: Adjusts the horizontal tracking (gaps between individual characters). [5, 6] 
-    * text-align: Dictates horizontal text alignment (left, right, center, justify). [4, 6] 
-    * text-wrap: A modern utility featuring values like balance (ideal for matching line lengths on headings to prevent single hanging words) or pretty. [3] 
+    * letter-spacing: Adjusts the horizontal tracking (gaps between individual characters). 
+    * text-align: Dictates horizontal text alignment (left, right, center, justify). 
 
-    text-wrap: balance;
-
-
-    ## 3. Loading Custom Fonts
-    To use custom typographies not built into native operating systems, use the @font-face rule to declare files hosted on your server or integrate third-party links via platforms like [Google Fonts](https://fonts.google.com/). [1, 8, 9] 
-
-    /* 1. Declare the font asset */@font-face {
-    font-family: 'CustomSans';
-    src: url('/fonts/custom-sans.woff2') format('woff2');
-    font-display: swap; /* Ensures text is visible while downloading */
-    }
-    /* 2. Target it in your CSS */
-    body {
-    font-family: 'CustomSans', sans-serif;
-    }
-
-    ## 4. The font Shorthand Property
-    You can condense multiple longhand font rules into a single font property line. However, it must strictly follow a specific structural order, and both font-size and font-family are mandatory. Optional parameters like line-height must follow size directly, separated by a forward slash. [10, 11] 
-
-    /* Order: font-style font-variant font-weight font-size/line-height font-family */
-    font: italic normal bold 1rem/1.6 "Inter", sans-serif;
-
+    ## 3. TODO: Loading Custom Fonts
+    To use custom typographies not built into native operating systems, use the @font-face rule to declare files hosted on your server or integrate third-party links via platforms like [Google Fonts](https://fonts.google.com/).
  -->
 
 </body>
