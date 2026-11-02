@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Demonstration</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: myAnimation1;
+            animation-duration: 2s;
+        }
+
+        @keyframes myAnimation1 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: myAnimation2;
+            animation-duration: 10s;
+        }
+
+        @keyframes myAnimation2 {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS allows animation of HTML elements without using JavaScript! 
+    An animation lets an element gradually change from one style to another.
+
+    You can change as many CSS properties you want, as many times as you want.
+
+    To use CSS animation, you must specify some keyframes for the animation.
+
+    Keyframes hold what styles the element will have at certain times.    
+
+    The animation-name property specifies a name for the animation.
+
+    The animation-duration property defines how long an animation should take to complete. If this property is not specified, no animation will occur, because the default value is 0s (0 seconds).
+
+    When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+
+    To get an animation to work, you must bind the animation to an element.
+
+
+    -->
+
+
+    <h1>CSS Animation</h1>
+
+    <div class="div1"></div>
+
+    <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+
+    <!-- In the example above we have used the keywords "from" and "to" in the @keyframes rule, which represents 0% (start) and 100% (complete).
+
+    It is also possible to use percent. By using percent, you can add as many style changes as you like.
+
+        
+    In CSS @keyframes, the percentage values (0%, 25%, 50%, 100%) refer to percentage milestones of the total animation duration.
+
+    Since .div2 has an animation-duration: 10s:
+
+    0% happens at 0 seconds (the start).
+
+    25% happens at 2.5 seconds (25% of 10 seconds).
+
+    50% happens at 5 seconds (50% of 10 seconds).
+
+    100% happens at 10 seconds (the end).
+
+    TODO: Read about more Animations properties
+    
+    -->
+
+
+
+    <div class="div2"></div>
+
+</body>
+
+</html>
