@@ -6,13 +6,13 @@ function sumNumbers(...arr) { // rest operator
 
     let sum = 0;
     arr.forEach((ele) => sum += ele);
-    console.log(sum);
+    // console.log(sum);
 }
 
-// sumNumbers(1, 2, 3);
+sumNumbers(1, 2, 3);
 
 let myArr = [5, 4, 3];
-console.log(...myArr);
+console.log(myArr);
 sumNumbers(...myArr); // spread operator, it is becoming 5, 4, 3
 
 /*

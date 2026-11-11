@@ -1,0 +1,22 @@
+Single threaded means that our program is only using one thread of execution to perform the tasks
+
+JavaScript/Node Js is a single threaded application. It means it only uses one thread to execute the all tasks.
+
+Node.js is often described as single-threaded because your JavaScript code executes on a single main thread. However, the Node.js runtime environment itself is multi-threaded under the hood, using a C++ library called libuv to handle I/O and other expensive operations in a separate thread pool.
+
+Other programming languages such as java, c++, golang are multi threaded.
+
+Example:
+
+A simple Js program
+
+processPayment(); // takes 1 second to complete 
+
+invoiceGenerate(); // takes 3 second to complete, this is a blocking call 
+
+sendEmail(); // this won't be executed until the thread executes the above task which is taking 3 seconds to complete
+
+But why Node Js is fast despite of single threaded architecture  ?
+
+It uses event loop for async operation to let the other tasks be completed if one task is taking too much time.
+

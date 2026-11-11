@@ -1,0 +1,16 @@
+Event loop(Semi Infinite - stops when there is no other work to do) is the reason of Node Js performance. It executes the non-blocking operations. 
+
+Understanding it:
+
+https://www.builder.io/blog/visual-guide-to-nodejs-event-loop - in depth 
+
+global() is the base of the call stack - like main
+
+Important: 
+Node.js executes JavaScript code within a single thread of its Event Loop, making it appear single-threaded. However, it achieves concurrency and efficiency through non-blocking I/O operations managed by libuv and provides the ability to leverage multiple threads for CPU-bound tasks using worker_threads
+4 threads by default in worker threads
+
+The two module systems in Node.js:
+Type	Syntax	File Extension	Compatibility
+CommonJS	require() / module.exports	.js (default)	Traditional Node.js
+ES Modules (ESM)	import / export	.mjs or with "type": "module"	Modern JavaScript
