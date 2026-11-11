@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Forms Masterclass</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        form {
+            max-width: 400px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.85rem;
+            margin-top: 4px;
+            display: block;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form id="registration-form">
+        <!-- Text Input -->
+        <div class="form-group">
+            <label for="student-name">Full Name:</label>
+            <input type="text" id="student-name" placeholder="Enter your name">
+            <span id="name-error" class="error"></span>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-group">
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+
+        <!-- Select Dropdown -->
+        <div class="form-group">
+            <label for="course-select">Select Course:</label>
+            <select id="course-select">
+                <option value="">-- Choose Course --</option>
+                <option value="MERN">MERN Stack</option>
+                <option value="Java">Java & DSA</option>
+                <option value="PHP">PHP & Laravel</option>
+            </select>
+            <span id="course-error" class="error"></span>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-group">
+            <label><input type="checkbox" id="terms-checkbox"> I agree to the terms and conditions</label>
+            <span id="terms-error" class="error"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Register Now</button>
+    </form>
+
+    <script>
+        // ==========================================
+        // FORM HANDLING & VALIDATION SCRIPT
+        // ==========================================
+
+        const form = document.getElementById('registration-form');
+
+        form.addEventListener('submit', function (event) {
+            // 1. PREVENT DEFAULT SUBMISSION
+            // By default, submitting a form reloads the page. 
+            // event.preventDefault() stops this so JavaScript can validate data first.
+            event.preventDefault();
+
+            // Clear previous error messages
+            document.getElementById('name-error').textContent = '';
+            document.getElementById('course-error').textContent = '';
+            document.getElementById('terms-error').textContent = '';
+
+            let isValid = true;
+
+            // 2. ACCESSING & VALIDATING TEXT INPUT VALUES (.value & .trim())
+            const nameInput = document.getElementById('student-name');
+            const nameValue = nameInput.value.trim(); // .trim() removes accidental leading/trailing spaces
+
+            if (nameValue === "") {
+                document.getElementById('name-error').textContent = "Full name is required!";
+                isValid = false;
+            }
+
+            // 3. ACCESSING SELECT DROPDOWNS
+            const courseSelect = document.getElementById('course-select');
+            const selectedCourse = courseSelect.value; // Returns the value of the selected option
+
+            if (selectedCourse === "") {
+                document.getElementById('course-error').textContent = "Please select a course!";
+                isValid = false;
+            }
+
+            // 4. ACCESSING CHECKBOXES (.checked property)
+            const termsCheckbox = document.getElementById('terms-checkbox');
+
+            if (!termsCheckbox.checked) { // .checked returns true or false
+                document.getElementById('terms-error').textContent = "You must agree to the terms!";
+                isValid = false;
+            }
+
+            // 5. HANDLING RADIO BUTTONS (Querying the checked radio)
+            const selectedGender = document.querySelector('input[name="gender"]:checked');
+            let genderValue = selectedGender ? selectedGender.value : "Not specified";
+
+            // 6. FINAL SUBMISSION CHECK
+            if (isValid) {
+                console.log("Form submitted successfully!");
+                console.log({
+                    name: nameValue,
+                    gender: genderValue,
+                    course: selectedCourse,
+                    termsAccepted: termsCheckbox.checked
+                });
+
+                alert(`Registration successful for ${nameValue} in ${selectedCourse}!`);
+                form.reset(); // Resets all form fields back to empty/default states
+            }
+        });
+    </script>
+
+</body>
+
+</html>

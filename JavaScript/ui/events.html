@@ -1,0 +1,166 @@
+Here is a comprehensive, student-friendly code example with detailed comment explanations covering the **most frequently
+used JavaScript events** (Mouse, Keyboard, Form, and Window events).
+
+You can use this exact file to demonstrate event handling to your students:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin-bottom: 15px;
+            display: block;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Most Used JavaScript Events</h1>
+
+    <!-- 1. Mouse Events Target Box -->
+    <div id="interactive-box" class="box">Hover or Click Me</div>
+
+    <!-- 2. Form & Keyboard Events -->
+    <form id="user-form">
+        <label for="name-input">Type Your Name (Keyboard & Input Events):</label>
+        <input type="text" id="name-input" placeholder="Start typing...">
+
+        <label for="country-select">Select Country (Change Event):</label>
+        <select id="country-select">
+            <option value="">--Choose--</option>
+            <option value="India">India</option>
+            <option value="Canada">Canada</option>
+            <option value="Germany">Germany</option>
+        </select>
+
+        <button type="submit" id="submit-btn">Submit Form</button>
+    </form>
+
+    <p id="output-text" style="font-weight: bold; color: navy;"></p>
+
+    <script>
+        // ==========================================
+        // 1. MOUSE EVENTS (click, dblclick, mouseenter, mouseleave)
+        // ==========================================
+        const box = document.getElementById('interactive-box');
+        const output = document.getElementById('output-text');
+
+        // 'click': Triggers when an element is clicked and released
+        box.addEventListener('click', function () {
+            output.textContent = "Event: Box was clicked!";
+            box.style.backgroundColor = "dodgerblue";
+        });
+
+        // 'dblclick': Triggers on a double click
+        box.addEventListener('dblclick', function () {
+            output.textContent = "Event: Box was double-clicked!";
+            box.style.backgroundColor = "purple";
+        });
+
+        // 'mouseenter': Triggers when the mouse pointer enters the element's boundary
+        box.addEventListener('mouseenter', function () {
+            console.log("Mouse entered the box area.");
+        });
+
+        // 'mouseleave': Triggers when the mouse pointer leaves the element's boundary
+        box.addEventListener('mouseleave', function () {
+            console.log("Mouse left the box area.");
+            box.style.backgroundColor = "lightcoral"; // reset color
+        });
+
+
+        // ==========================================
+        // 2. KEYBOARD EVENTS (keydown, keyup)
+        // ==========================================
+        const nameInput = document.getElementById('name-input');
+
+        // 'keydown': Triggers the moment a key is pressed down
+        nameInput.addEventListener('keydown', function (event) {
+            console.log(`Key down: ${event.key} (Code: ${event.code})`);
+        });
+
+        // 'input': Triggers *every time* the value of an input field changes (Best for live typing checks)
+        nameInput.addEventListener('input', function (event) {
+            output.textContent = `Live Input Value: ${event.target.value}`;
+        });
+
+
+        // ==========================================
+        // 3. FORM EVENTS (submit, change, focus, blur)
+        // ==========================================
+        const countrySelect = document.getElementById('country-select');
+        const userForm = document.getElementById('user-form');
+
+        // 'change': Triggers when the selection or value changes and loses focus (or instantly for selects)
+        countrySelect.addEventListener('change', function (event) {
+            output.textContent = `Selected Country: ${event.target.value}`;
+        });
+
+        // 'focus': Triggers when an input field gains active focus
+        nameInput.addEventListener('focus', function () {
+            nameInput.style.border = "2px solid green";
+        });
+
+        // 'blur': Triggers when an input field loses focus
+        nameInput.addEventListener('blur', function () {
+            nameInput.style.border = "1px solid #ccc";
+        });
+
+        // 'submit': Triggers when a form is submitted. 
+        // event.preventDefault() stops the page from reloading.
+        userForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert("Form submission intercepted! Data processed safely with JavaScript.");
+        });
+
+
+        // ==========================================
+        // 4. WINDOW / DOCUMENT EVENTS (DOMContentLoaded, load, resize)
+        // ==========================================
+
+        // 'DOMContentLoaded': Triggers as soon as the HTML DOM is fully parsed and loaded 
+        // (does not wait for stylesheets, images, or sub-frames to finish loading).
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("DOM is fully parsed and ready!");
+        });
+
+        // 'resize': Triggers whenever the browser window size changes
+        window.addEventListener('resize', function () {
+            console.log(`Current Window Width: ${window.innerWidth}px`);
+        });
+    </script>
+
+</body>
+
+</html>
+
+```
