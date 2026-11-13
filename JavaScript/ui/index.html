@@ -10,6 +10,17 @@
             background-color: yellow;
             font-weight: bold;
         }
+
+        .hidden {
+            display: none;
+            /* This text is hidden via CSS */
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -26,6 +37,12 @@
     <br><br>
 
     <button id="action-btn">Click Me</button>
+
+    <!-- Test Container -->
+    <div id="demo-box">
+        <p>Hello, <span>Gaurav</span>!</p>
+        <p class="hidden">This is secret hidden text.</p>
+    </div>
 
     <script>
         // ==========================================
@@ -74,14 +91,58 @@
         // nodeType: Returns a number representing the type of node (e.g., 1 for Element node, 3 for Text node)
         console.log("Node Type number:", titleElement.nodeType); // Output: 1
 
+        // titleElement.firstChild points to the text "DOM Fundamentals" inside the h1
+        // In the DOM, the raw text written inside an HTML tag is stored as its own separate child node—called a Text Node—rather than being part of the element tag itself.
+
+        const textNode = titleElement.firstChild;
+
+        console.log(textNode.nodeType); // Output: 3
+        console.log(textNode.nodeValue); // Output: "DOM Fundamentals"
+
         // tagName: Returns the HTML tag name in uppercase string format
         console.log("Tag Name:", titleElement.tagName); // Output: "H1"
 
-        // innerText vs textContent vs innerHTML:
-        // - innerText: Returns the visible text, respecting CSS styling (ignores hidden text).
-        // - textContent: Returns all text inside the node, including hidden text and raw spacing.
-        // - innerHTML: Returns or sets the inner text AND any nested HTML tags.
-        console.log("Text Content:", titleElement.textContent);
+        const box = document.getElementById('demo-box');
+
+        // ==========================================
+        // 1. innerText
+        // ==========================================
+        // - Ignores hidden elements (display: none).
+        // - Returns only the human-readable visible text.
+        // - Triggers a browser layout calculation (reflow), making it slower for performance.
+        console.log("--- innerText ---");
+        console.log(box.innerText);
+        /* Output:
+           Hello, Gaurav!
+           (Notice that "This is secret hidden text." is completely ignored because of display: none)
+        */
+
+
+        // ==========================================
+        // 2. textContent
+        // ==========================================
+        // - Returns ALL text inside the element, INCLUDING hidden text.
+        // - Preserves raw spacing and line breaks written in the HTML source.
+        // - Much faster than innerText because it doesn't care about CSS styling or layout.
+        console.log("--- textContent ---");
+        console.log(box.textContent);
+        /* Output:
+           Hello, Gaurav!
+           This is secret hidden text.
+        */
+
+
+        // ==========================================
+        // 3. innerHTML
+        // ==========================================
+        // - Returns the text AND the actual HTML tag structure inside the element as a string.
+        // - Allows you to read or rewrite entire HTML blocks dynamically.
+        console.log("--- innerHTML ---");
+        console.log(box.innerHTML);
+        /* Output:
+           <p>Hello, <span>Gaurav</span>!</p>
+           <p class="hidden">This is secret hidden text.</p>
+        */
 
 
         // ==========================================
@@ -109,6 +170,8 @@
             // Changing input values or element attributes dynamically
             inputField.value = "Admin User";
         });
+        
+        
         // TODO: Read about async and defer
     </script>
 

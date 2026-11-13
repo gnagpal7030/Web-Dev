@@ -16,7 +16,7 @@
             <div class="nav-links">
                 <a href="#products">Shop</a>
                 <a href="#about">Our story</a>
-                <a class="cart-link" href="#products">Bag (0)</a>
+                <a class="cart-link" href="#bag">Bag (<span id="cart-count">0</span>)</a>
             </div>
         </nav>
     </header>
@@ -35,8 +35,11 @@
                     <p class="eyebrow">THE EVERYDAY EDIT</p>
                     <h2>Made for your moments</h2>
                 </div>
-                <p class="product-count">6 thoughtful finds</p>
+                <p class="product-count" id="product-count" aria-live="polite">6 thoughtful finds</p>
             </div>
+
+            <label class="visually-hidden" for="product-search">Search products</label>
+            <input type="search" id="product-search" class="product-search" placeholder="Search the collection">
 
             <div class="product-list">
                 <article class="product-card">
@@ -47,6 +50,8 @@
                             <p class="price">$24</p>
                         </div>
                         <p class="description">Hand-finished stoneware for your favorite slow-morning ritual.</p>
+                        <button class="add-to-bag" type="button" data-product-name="Sunday Ceramic Mug"
+                            data-product-price="24">Add to bag</button>
                     </div>
                 </article>
 
@@ -58,6 +63,8 @@
                             <p class="price">$32</p>
                         </div>
                         <p class="description">A roomy everyday carry-all made from durable cotton canvas.</p>
+                        <button class="add-to-bag" type="button" data-product-name="Daytrip Canvas Tote"
+                            data-product-price="32">Add to bag</button>
                     </div>
                 </article>
 
@@ -69,6 +76,8 @@
                             <p class="price">$28</p>
                         </div>
                         <p class="description">Warm cedar and soft citrus, poured for a little evening calm.</p>
+                        <button class="add-to-bag" type="button" data-product-name="Golden Hour Candle"
+                            data-product-price="28">Add to bag</button>
                     </div>
                 </article>
 
@@ -80,6 +89,8 @@
                             <p class="price">$18</p>
                         </div>
                         <p class="description">A linen-bound place for lists, sketches, and bright ideas.</p>
+                        <button class="add-to-bag" type="button" data-product-name="Open Pages Notebook"
+                            data-product-price="18">Add to bag</button>
                     </div>
                 </article>
 
@@ -91,6 +102,8 @@
                             <p class="price">$36</p>
                         </div>
                         <p class="description">A one-of-a-kind shape that makes room for a single stem.</p>
+                        <button class="add-to-bag" type="button" data-product-name="Little Elsewhere Vase"
+                            data-product-price="36">Add to bag</button>
                     </div>
                 </article>
 
@@ -102,9 +115,52 @@
                             <p class="price">$16</p>
                         </div>
                         <p class="description">Soft, breathable cotton comfort for feet-up kind of days.</p>
+                        <button class="add-to-bag" type="button" data-product-name="Cloud Nine Socks"
+                            data-product-price="16">Add to bag</button>
                     </div>
                 </article>
             </div>
+        </section>
+
+        <section class="bag-section" id="bag" aria-labelledby="bag-heading">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR EVERYDAY FINDS</p>
+                    <h2 id="bag-heading">Your bag</h2>
+                </div>
+                <button class="text-button" type="button" id="clear-bag" disabled>Empty bag</button>
+            </div>
+
+            <p id="bag-empty">Your bag is empty. Add something lovely from the collection.</p>
+            <ul class="bag-items" id="bag-items"></ul>
+            <p class="bag-total" id="bag-total">Total: $0.00</p>
+            <p id="bag-status" class="form-message" aria-live="polite"></p>
+
+            <form class="checkout-form" id="checkout-form">
+                <h3>Demo checkout</h3>
+                <p class="form-note">This practice checkout does not collect payment or send your details anywhere.</p>
+
+                <label for="customer-name">Your name</label>
+                <input type="text" id="customer-name" name="name" autocomplete="name" required>
+
+                <label for="customer-email">Email address</label>
+                <input type="email" id="customer-email" name="email" autocomplete="email" required>
+
+                <label for="delivery-option">Delivery speed</label>
+                <select id="delivery-option" name="delivery">
+                    <option value="Standard">Standard delivery</option>
+                    <option value="Express">Express delivery</option>
+                </select>
+                <p id="delivery-message" class="form-note">Standard delivery is selected.</p>
+
+                <label class="terms-label" for="demo-confirmation">
+                    <input type="checkbox" id="demo-confirmation" required>
+                    I understand this is a demo order.
+                </label>
+
+                <button class="checkout-button" type="submit">Place demo order</button>
+                <p id="checkout-message" class="form-message" aria-live="polite"></p>
+            </form>
         </section>
     </main>
 
@@ -112,6 +168,7 @@
         <p>Small comforts. Considered carefully.</p>
         <p>© 2025 Morrow Market</p>
     </footer>
+    <script src="js/store.js"></script>
 </body>
 
 </html>

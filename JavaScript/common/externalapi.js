@@ -15,7 +15,7 @@ async function callAPI(url) {
 // callAPI("https://jsonplaceholder.typicode.com/todos/1");
 
 try {
-  await callAPI("https://jsonplaceholder.typcode.com/todos/1"); // Put await and see change
+  await callAPI("https://jsonplaceholder.typicode.com/todos/1"); // Put await and see change
   console.log("Data was fetched sucessfully");
 } catch (err) {
   console.log("I got the error", err);

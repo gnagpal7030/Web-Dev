@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM and Events Exercises</title>
+    <style>
+        body {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        h1,
+        h2 {
+            line-height: 1.25;
+        }
+
+        .exercise {
+            margin: 20px 0;
+            padding: 16px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .exercise h2 {
+            margin-top: 0;
+        }
+
+        code {
+            padding: 2px 5px;
+            border-radius: 4px;
+            background: #f2f2f2;
+        }
+
+        .navigation {
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript DOM and Events: 10 Exercises</h1>
+    <p>
+        Use the examples in <a href="index.html">DOM Fundamentals</a> and
+        <a href="events.html">Most Used JavaScript Events</a> as references.
+        Create a separate HTML page for your solutions and test each exercise in the browser.
+    </p>
+
+    <section class="exercise">
+        <h2>1. Find elements in the DOM</h2>
+        <p>
+            Add a heading with an ID, three paragraphs sharing a class, and a button.
+            Use <code>getElementById</code> to find the heading,
+            <code>querySelector</code> to find the first paragraph, and
+            <code>querySelectorAll</code> to find all three. Log the elements and the
+            number of paragraphs in the console.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>2. Inspect and update attributes</h2>
+        <p>
+            Create a text input with a <code>type</code>, <code>value</code>, and
+            <code>placeholder</code> attribute. Use <code>getAttribute</code>,
+            <code>hasAttribute</code>, and <code>setAttribute</code> to inspect and
+            update it. Add a second button that removes the <code>value</code>
+            attribute with <code>removeAttribute</code>.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>3. Inspect nodes and tags</h2>
+        <p>
+            Select a heading that contains plain text. Display its
+            <code>tagName</code>, <code>nodeType</code>, and first child's
+            <code>nodeType</code> and <code>nodeValue</code> on the page. Confirm
+            that the heading is an element node and its text is a text node.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>4. Compare text and HTML content</h2>
+        <p>
+            Create a container with a paragraph, a nested <code>span</code>, and a
+            hidden paragraph using <code>display: none</code>. Log the container's
+            <code>innerText</code>, <code>textContent</code>, and
+            <code>innerHTML</code>. Observe how hidden text and HTML tags appear in
+            each result.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>5. Change content and input values</h2>
+        <p>
+            When a button is clicked, update a heading with <code>textContent</code>,
+            replace a card's contents with <code>innerHTML</code> (include a list),
+            and change a text input's <code>value</code>. Add a CSS class to style
+            the newly inserted content.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>6. Respond to mouse events</h2>
+        <p>
+            Make a colored box respond to <code>click</code> and
+            <code>dblclick</code> with different messages and background colors.
+            Also handle <code>mouseenter</code> and <code>mouseleave</code>: report
+            each event and restore the original color when the pointer leaves.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>7. Track keyboard and live input</h2>
+        <p>
+            Add a text input. Listen for <code>keydown</code> and <code>keyup</code>
+            and log the pressed key and its code. Use the <code>input</code> event to
+            display the current value as the user types.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>8. Handle form and focus events</h2>
+        <p>
+            Build a form with a name input, a country <code>select</code>, and a
+            submit button. Use <code>focus</code> and <code>blur</code> to change and
+            reset the input's border, <code>change</code> to show the selected
+            country, and <code>submit</code> to show the entered name. Call
+            <code>event.preventDefault()</code> so submitting does not reload the
+            page.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>9. Build a live character counter</h2>
+        <p>
+            Create a message field with a 100-character limit and a live counter.
+            Update the counter on every <code>input</code> event and show a warning
+            when fewer than 10 characters remain. Use a form submit handler with
+            <code>preventDefault</code> to display the final message. Try selecting
+            a value in a dropdown and report it with a <code>change</code> handler.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>10. React to page and window events</h2>
+        <p>
+            Use <code>DOMContentLoaded</code> to initialize a status message and
+            <code>window.load</code> to report that the page and its resources have
+            finished loading. Listen for <code>resize</code> and display the current
+            window width using <code>window.innerWidth</code>. Verify the resize
+            message changes when you resize the browser.
+        </p>
+    </section>
+
+    <section class="exercise">
+        <h2>11. Create a form</h2>
+        <p>
+            Add Js to existing form and print all the information when submit button is clicked. 
+        </p>
+    </section>
+
+    <p class="navigation"><a href="index.html">Back to DOM Fundamentals</a></p>
+</body>
+
+</html>
