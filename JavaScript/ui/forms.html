@@ -23,21 +23,6 @@
             margin-bottom: 15px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
 
         .error {
             color: red;
@@ -70,7 +55,7 @@
         <!-- Text Input -->
         <div class="form-group">
             <label for="student-name">Full Name:</label>
-            <input type="text" id="student-name" placeholder="Enter your name">
+            <input type="text" id="student-name" placeholder="Enter your name"> <span style="color:red;">*</span>
             <span id="name-error" class="error"></span>
         </div>
 
@@ -125,7 +110,7 @@
 
             // 2. ACCESSING & VALIDATING TEXT INPUT VALUES (.value & .trim())
             const nameInput = document.getElementById('student-name');
-            const nameValue = nameInput.value.trim(); // .trim() removes accidental leading/trailing spaces
+            const nameValue = nameInput.value.trim(); // .trim() removes accidental leading/trailing spaces, sanitizing the input. 
 
             if (nameValue === "") {
                 document.getElementById('name-error').textContent = "Full name is required!";
@@ -165,10 +150,12 @@
 
                 alert(`Registration successful for ${nameValue} in ${selectedCourse}!`);
                 form.reset(); // Resets all form fields back to empty/default states
+            }else{
+                console.log("Form values are invalid. You are not allowed to submit the form.");
             }
         });
-    </script>
 
+    </script>
 </body>
 
 </html>
