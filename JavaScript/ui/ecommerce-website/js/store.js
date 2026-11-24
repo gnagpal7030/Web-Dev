@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
         });
 
-        bagItems.innerHTML = itemMarkup;
+        bagItems.innerHTML = itemMarkup; 
         cartCount.textContent = cart.length;
         bagTotal.textContent = `Total: $${total.toFixed(2)}`;
         bagEmpty.style.display = cart.length === 0 ? '' : 'none';
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
         while (cart.length > 0) {
             cart.pop();
         }
-
+        
         renderBag();
         bagStatus.textContent = '';
     });
