@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+    /* Custom colors -> generates bg-brand, text-brand, border-brand, etc. */
+    --color-brand: #1d4ed8;
+    --color-brand-dark: #1e3a8a;
+
+    /* Custom font family -> generates font-display */
+    --font-display: "Inter", system-ui, sans-serif;
+
+    /* Custom border radius -> generates rounded-card */
+    --radius-card: 0.75rem;
+
+    /* Custom breakpoint -> generates custom-lg: variants */
+    --breakpoint-custom-lg: 72rem;
+}
