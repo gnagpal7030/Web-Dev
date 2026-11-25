@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thoughtful everyday finds for your home and life."
+    />
+    <title>Morrow Market | Everyday Finds</title>
+  </head>
+
+  <body class="m-0 bg-[#faf8f4] font-[Arial,sans-serif] text-[#282b23]">
+    <header class="border-b border-[#e9e5dc] bg-[#faf8f4]">
+      <nav
+        class="mx-auto flex max-w-[78rem] items-center justify-between px-4 py-4 min-[601px]:px-8 min-[601px]:py-5"
+        aria-label="Main navigation"
+      >
+        <a
+          class="text-[1.35rem] font-bold tracking-[-0.05rem] text-[#283d32]"
+          href="#"
+        >morrow<span class="text-[#b66d4d]">market</span></a>
+        <div class="flex items-center gap-[0.8rem] text-[0.8rem] text-[#56594f] min-[601px]:gap-8 min-[601px]:text-[0.9rem]">
+          <a class="hover:text-[#283d32]" href="#products">Shop</a>
+          <a class="hover:text-[#283d32]" href="#about">Our story</a>
+          <a
+            class="rounded-full border border-[#d8d4ca] px-3 py-2 hover:border-[#283d32] min-[601px]:px-4"
+            href="#bag"
+          >Bag (<span id="cart-count">0</span>)</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="bg-[#e9eee6] px-8 pt-20 pb-[4.5rem] text-center"
+        id="about"
+      >
+        <p class="mb-4 text-xs font-bold tracking-[0.14rem] text-[#a05f43]">
+          GOOD THINGS, MADE TO LAST
+        </p>
+        <h1 class="font-[Georgia,serif] text-[2.8rem] font-normal leading-[1.08] text-[#283d32] min-[601px]:text-[3.6rem]">
+          Little things for<br />everyday living.
+        </h1>
+        <p class="mx-auto mt-5 mb-7 max-w-[32rem] text-base leading-[1.7] text-[#66695f]">
+          Thoughtful pieces for slower mornings, cozier evenings, and all the moments in between.
+        </p>
+        <a
+          class="inline-block rounded-full bg-[#283d32] px-[1.4rem] py-[0.9rem] text-sm text-white transition-colors hover:bg-[#3d5948]"
+          href="#products"
+        >Shop the collection</a>
+      </section>
+
+      <section
+        class="mx-auto max-w-[78rem] px-4 pb-20 pt-16 min-[601px]:px-8"
+        id="products"
+      >
+        <div class="mb-7 flex items-end justify-between gap-4 max-[600px]:items-start">
+          <div>
+            <p class="mb-[0.55rem] text-xs font-bold tracking-[0.14rem] text-[#a05f43]">
+              THE EVERYDAY EDIT
+            </p>
+            <h2 class="font-[Georgia,serif] text-[1.7rem] font-normal text-[#283d32] min-[601px]:text-[2rem]">
+              Made for your moments
+            </h2>
+          </div>
+          <p
+            class="mb-1 text-sm text-[#77786e]"
+            id="product-count"
+            aria-live="polite"
+          >6 thoughtful finds</p>
+        </div>
+
+        <label class="sr-only" for="product-search">Search products</label>
+        <input
+          class="mb-6 ml-auto block w-full max-w-[22rem] rounded border border-[#d8d4ca] bg-white p-3 text-[#282b23] placeholder:text-[#77786e] focus:border-[#283d32] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]"
+          type="search"
+          id="product-search"
+          placeholder="Search the collection"
+        />
+
+        <div class="flex flex-wrap gap-6" id="product-list">
+          <article class="flex-[1_1_19rem] overflow-hidden rounded-xl border border-[#e9e5dc] bg-white" data-product-card>
+            <img class="block h-60 w-full bg-[#f0ede6]" src="assets/ceramic-mug.svg" alt="Cream ceramic mug with a curved handle" />
+            <div class="px-[1.2rem] pb-[1.3rem] pt-[1.15rem]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="m-0 text-base font-bold text-[#30352c]">Sunday Ceramic Mug</h3>
+                <p class="m-0 text-[0.95rem] font-bold text-[#283d32]">$24</p>
+              </div>
+              <p class="mt-[0.55rem] text-[0.85rem] leading-relaxed text-[#77786e]">Hand-finished stoneware for your favorite slow-morning ritual.</p>
+              <button class="mt-4 rounded-full bg-[#283d32] px-4 py-[0.7rem] text-white transition-colors hover:bg-[#3d5948] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]" type="button" data-product-name="Sunday Ceramic Mug" data-product-price="24">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="flex-[1_1_19rem] overflow-hidden rounded-xl border border-[#e9e5dc] bg-white" data-product-card>
+            <img class="block h-60 w-full bg-[#f0ede6]" src="assets/canvas-tote.svg" alt="Natural canvas tote bag with sturdy handles" />
+            <div class="px-[1.2rem] pb-[1.3rem] pt-[1.15rem]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="m-0 text-base font-bold text-[#30352c]">Daytrip Canvas Tote</h3>
+                <p class="m-0 text-[0.95rem] font-bold text-[#283d32]">$32</p>
+              </div>
+              <p class="mt-[0.55rem] text-[0.85rem] leading-relaxed text-[#77786e]">A roomy everyday carry-all made from durable cotton canvas.</p>
+              <button class="mt-4 rounded-full bg-[#283d32] px-4 py-[0.7rem] text-white transition-colors hover:bg-[#3d5948] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]" type="button" data-product-name="Daytrip Canvas Tote" data-product-price="32">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="flex-[1_1_19rem] overflow-hidden rounded-xl border border-[#e9e5dc] bg-white" data-product-card>
+            <img class="block h-60 w-full bg-[#f0ede6]" src="assets/amber-candle.svg" alt="Amber glass candle with a small flame" />
+            <div class="px-[1.2rem] pb-[1.3rem] pt-[1.15rem]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="m-0 text-base font-bold text-[#30352c]">Golden Hour Candle</h3>
+                <p class="m-0 text-[0.95rem] font-bold text-[#283d32]">$28</p>
+              </div>
+              <p class="mt-[0.55rem] text-[0.85rem] leading-relaxed text-[#77786e]">Warm cedar and soft citrus, poured for a little evening calm.</p>
+              <button class="mt-4 rounded-full bg-[#283d32] px-4 py-[0.7rem] text-white transition-colors hover:bg-[#3d5948] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]" type="button" data-product-name="Golden Hour Candle" data-product-price="28">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="flex-[1_1_19rem] overflow-hidden rounded-xl border border-[#e9e5dc] bg-white" data-product-card>
+            <img class="block h-60 w-full bg-[#f0ede6]" src="assets/linen-notebook.svg" alt="Open linen-covered notebook with a pencil" />
+            <div class="px-[1.2rem] pb-[1.3rem] pt-[1.15rem]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="m-0 text-base font-bold text-[#30352c]">Open Pages Notebook</h3>
+                <p class="m-0 text-[0.95rem] font-bold text-[#283d32]">$18</p>
+              </div>
+              <p class="mt-[0.55rem] text-[0.85rem] leading-relaxed text-[#77786e]">A linen-bound place for lists, sketches, and bright ideas.</p>
+              <button class="mt-4 rounded-full bg-[#283d32] px-4 py-[0.7rem] text-white transition-colors hover:bg-[#3d5948] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]" type="button" data-product-name="Open Pages Notebook" data-product-price="18">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="flex-[1_1_19rem] overflow-hidden rounded-xl border border-[#e9e5dc] bg-white" data-product-card>
+            <img class="block h-60 w-full bg-[#f0ede6]" src="assets/desk-vase.svg" alt="Small sculptural vase with a leafy branch" />
+            <div class="px-[1.2rem] pb-[1.3rem] pt-[1.15rem]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="m-0 text-base font-bold text-[#30352c]">Little Elsewhere Vase</h3>
+                <p class="m-0 text-[0.95rem] font-bold text-[#283d32]">$36</p>
+              </div>
+              <p class="mt-[0.55rem] text-[0.85rem] leading-relaxed text-[#77786e]">A one-of-a-kind shape that makes room for a single stem.</p>
+              <button class="mt-4 rounded-full bg-[#283d32] px-4 py-[0.7rem] text-white transition-colors hover:bg-[#3d5948] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]" type="button" data-product-name="Little Elsewhere Vase" data-product-price="36">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="flex-[1_1_19rem] overflow-hidden rounded-xl border border-[#e9e5dc] bg-white" data-product-card>
+            <img class="block h-60 w-full bg-[#f0ede6]" src="assets/soft-socks.svg" alt="Pair of soft rust-colored knit socks" />
+            <div class="px-[1.2rem] pb-[1.3rem] pt-[1.15rem]">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="m-0 text-base font-bold text-[#30352c]">Cloud Nine Socks</h3>
+                <p class="m-0 text-[0.95rem] font-bold text-[#283d32]">$16</p>
+              </div>
+              <p class="mt-[0.55rem] text-[0.85rem] leading-relaxed text-[#77786e]">Soft, breathable cotton comfort for feet-up kind of days.</p>
+              <button class="mt-4 rounded-full bg-[#283d32] px-4 py-[0.7rem] text-white transition-colors hover:bg-[#3d5948] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]" type="button" data-product-name="Cloud Nine Socks" data-product-price="16">Add to bag</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="mx-auto max-w-[78rem] px-4 pb-20 min-[601px]:px-8"
+        id="bag"
+        aria-labelledby="bag-heading"
+      >
+        <div class="mb-7 flex items-end justify-between gap-4 max-[600px]:items-start">
+          <div>
+            <p class="mb-[0.55rem] text-xs font-bold tracking-[0.14rem] text-[#a05f43]">
+              YOUR EVERYDAY FINDS
+            </p>
+            <h2 class="font-[Georgia,serif] text-[1.7rem] font-normal text-[#283d32] min-[601px]:text-[2rem]" id="bag-heading">Your bag</h2>
+          </div>
+          <button
+            class="rounded-full border border-[#d8d4ca] px-3 py-[0.45rem] text-[#283d32] transition-opacity hover:border-[#283d32] disabled:cursor-not-allowed disabled:opacity-55 min-[601px]:px-4"
+            type="button"
+            id="clear-bag"
+            disabled
+          >Empty bag</button>
+        </div>
+
+        <p class="text-[#77786e]" id="bag-empty">Your bag is empty. Add something lovely from the collection.</p>
+        <ul class="m-0 grid list-none gap-3 p-0" id="bag-items"></ul>
+        <p class="text-right font-bold" id="bag-total">Total: $0.00</p>
+        <p class="text-sm leading-relaxed text-[#283d32]" id="bag-status" aria-live="polite"></p>
+
+        <form
+          class="mt-8 grid max-w-lg gap-3 rounded-xl border border-[#e9e5dc] bg-white p-6"
+          id="checkout-form"
+        >
+          <h3 class="m-0 text-[1.17rem] font-bold">Demo checkout</h3>
+          <p class="m-0 mb-2 text-[0.85rem] text-[#77786e]">
+            This practice checkout does not collect payment or send your details anywhere.
+          </p>
+
+          <label class="text-[0.9rem] font-bold" for="customer-name">Your name</label>
+          <input
+            class="rounded border border-[#d8d4ca] bg-white p-3 text-[#282b23] focus:border-[#283d32] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]"
+            type="text"
+            id="customer-name"
+            name="name"
+            autocomplete="name"
+          />
+
+          <label class="text-[0.9rem] font-bold" for="customer-email">Email address</label>
+          <input
+            class="rounded border border-[#d8d4ca] bg-white p-3 text-[#282b23] focus:border-[#283d32] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]"
+            type="email"
+            id="customer-email"
+            name="email"
+            autocomplete="email"
+          />
+
+          <label class="text-[0.9rem] font-bold" for="delivery-option">Delivery speed</label>
+          <select
+            class="rounded border border-[#d8d4ca] bg-white p-3 text-[#282b23] focus:border-[#283d32] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32]"
+            id="delivery-option"
+            name="delivery"
+          >
+            <option value="Standard">Standard delivery</option>
+            <option value="Express">Express delivery</option>
+          </select>
+          <p class="mb-2 text-[0.85rem] text-[#77786e]" id="delivery-message">
+            Standard delivery is selected.
+          </p>
+
+          <label class="flex items-center gap-2 text-sm" for="demo-confirmation">
+            <input class="accent-[#283d32]" type="checkbox" id="demo-confirmation" />
+            I understand this is a demo order.
+          </label>
+
+          <button
+            class="mt-4 w-fit rounded-full bg-[#283d32] px-4 py-[0.7rem] text-white transition-colors hover:bg-[#3d5948] focus:outline-2 focus:outline-offset-2 focus:outline-[#283d32] disabled:cursor-not-allowed disabled:opacity-55"
+            type="submit"
+          >Place demo order</button>
+          <p class="text-sm leading-relaxed text-[#283d32]" id="checkout-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col gap-2 bg-[#283d32] px-4 py-6 text-[0.8rem] text-[#f5f1e8] min-[601px]:flex-row min-[601px]:items-center min-[601px]:justify-between min-[601px]:px-8"
+    >
+      <p class="m-0">Small comforts. Considered carefully.</p>
+      <p class="m-0">© 2025 Morrow Market</p>
+    </footer>
+
+    <script type="module" src="js/store.js"></script>
+  </body>
+</html>
